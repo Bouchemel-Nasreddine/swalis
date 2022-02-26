@@ -4,29 +4,20 @@ import 'package:flutter/services.dart';
 
 import '../home/home.dart';
 
-class SignInClient extends StatefulWidget {
-  const SignInClient({ Key? key }) : super(key: key);
+class ProductInfo extends StatefulWidget {
+  const ProductInfo({ Key? key }) : super(key: key);
 
   @override
-  _SignInClientState createState() => _SignInClientState();
+  _ProductInfoState createState() => _ProductInfoState();
 }
 
-Widget buildFirstName(){
+Widget buildProductName(){
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
-        'Client information',
-        style: TextStyle(
-          color:  Colors.white,
-          fontSize: 20.0,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      SizedBox(
-        height: 10.0,
-      ),
+
       Container(
+        padding: EdgeInsets.symmetric(horizontal: 25.0),
         alignment: Alignment.centerLeft,
         decoration: BoxDecoration(
             color: Colors.white,
@@ -47,11 +38,8 @@ Widget buildFirstName(){
           decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.person,
-                color: Color(0xffEC0677),
-              ),
-              hintText: 'First name',
+
+              hintText: 'Product name',
               hintStyle: TextStyle(
                   color: Colors.black87
               )
@@ -62,51 +50,15 @@ Widget buildFirstName(){
   );
 }
 
-Widget buildLastName(){
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10.0),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.black26,
-                  blurRadius: 6,
-                  offset: Offset(0,2)
-              )
-            ]
-        ),
-        height: 60.0,
-        child: TextField(
-          style: TextStyle(
-              color: Colors.black87
-          ),
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.person,
-                color: Color(0xffEC0677),
-              ),
-              hintText: 'Last name',
-              hintStyle: TextStyle(
-                  color: Colors.black87
-              )
-          ),
-        ),
-      ),
-    ],
-  );
-}
 
-Widget buildPhoneNumber(){
+
+Widget buildPoductPrice(){
   return Column(
+
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Container(
+        padding: EdgeInsets.symmetric(horizontal: 25.0),
         alignment: Alignment.centerLeft,
         decoration: BoxDecoration(
             color: Colors.white,
@@ -128,11 +80,8 @@ Widget buildPhoneNumber(){
           decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.phone_android,
-                color: Color(0xffEC0677),
-              ),
-              hintText: 'Phone Number',
+
+              hintText: 'Product price',
               hintStyle: TextStyle(
                   color: Colors.black87
               )
@@ -144,11 +93,13 @@ Widget buildPhoneNumber(){
 }
 
 
-Widget buildAdress(){
+Widget buildProduction(){
   return Column(
+
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Container(
+        padding: EdgeInsets.symmetric(horizontal: 25.0),
         alignment: Alignment.centerLeft,
         decoration: BoxDecoration(
             color: Colors.white,
@@ -170,11 +121,8 @@ Widget buildAdress(){
           decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.location_city,
-                color: Color(0xffEC0677),
-              ),
-              hintText: 'Adress',
+
+              hintText: 'Capacity of production per week',
               hintStyle: TextStyle(
                   color: Colors.black87
               )
@@ -185,11 +133,14 @@ Widget buildAdress(){
   );
 }
 
-Widget buildEmail(){
+Widget buildDescription(){
   return Column(
+
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Container(
+
+        padding: EdgeInsets.symmetric(horizontal: 25.0),
         alignment: Alignment.centerLeft,
         decoration: BoxDecoration(
             color: Colors.white,
@@ -202,20 +153,17 @@ Widget buildEmail(){
               )
             ]
         ),
-        height: 60.0,
+        height: 100.0,
         child: TextField(
-          keyboardType: TextInputType.emailAddress,
+
           style: TextStyle(
               color: Colors.black87
           ),
           decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.email,
-                color: Color(0xffEC0677),
-              ),
-              hintText: 'Email',
+
+              hintText: 'Description',
               hintStyle: TextStyle(
                   color: Colors.black87
               )
@@ -226,102 +174,9 @@ Widget buildEmail(){
   );
 }
 
-Widget buildPassword(){
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Text(
-        'Password',
-        style: TextStyle(
-          color:  Colors.white,
-          fontSize: 20.0,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      SizedBox(
-        height: 10.0,
-      ),
 
-      Container(
-        alignment: Alignment.centerLeft,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10.0),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.black26,
-                  blurRadius: 6,
-                  offset: Offset(0,2)
-              )
-            ]
-        ),
-        height: 60.0,
-        child: TextField(
-          obscureText: true,
-          style: TextStyle(
-              color: Colors.black87
-          ),
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.lock,
-                color: Color(0xffEC0677),
-              ),
-              hintText: 'Password',
-              hintStyle: TextStyle(
-                  color: Colors.black87
-              )
-          ),
-        ),
-      ),
-    ],
-  );
-}
 
-Widget buildConfirmPassword(){
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-
-      Container(
-        alignment: Alignment.centerLeft,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10.0),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.black26,
-                  blurRadius: 6,
-                  offset: Offset(0,2)
-              )
-            ]
-        ),
-        height: 60.0,
-        child: TextField(
-          obscureText: true,
-          style: TextStyle(
-              color: Colors.black87
-          ),
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.lock,
-                color: Color(0xffEC0677),
-              ),
-              hintText: 'Confirm password',
-              hintStyle: TextStyle(
-                  color: Colors.black87
-              )
-          ),
-        ),
-      ),
-    ],
-  );
-}
-
-class _SignInClientState extends State<SignInClient> {
+class _ProductInfoState extends State<ProductInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -355,7 +210,7 @@ class _SignInClientState extends State<SignInClient> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children:  [
                       Text(
-                        'Sign Up Client',
+                        'Product information',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 30.0,
@@ -366,56 +221,115 @@ class _SignInClientState extends State<SignInClient> {
                         height: 50.0,
                       ),
 
-                      buildFirstName(),
+                      buildProductName(),
                       SizedBox(
                         height: 10.0,
                       ),
-                      buildLastName(),
+                      buildPoductPrice(),
                       SizedBox(
                         height: 10.0,
                       ),
-                      buildEmail(),
+                      buildProduction(),
                       SizedBox(
                         height: 10.0,
                       ),
-                      buildPhoneNumber(),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      buildPassword(),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      buildConfirmPassword(),
-                      SizedBox(
-                        height: 10.0,
-                      ),
+                      buildDescription(),
+
                       Container(
+
                         padding: EdgeInsets.symmetric(vertical: 25.0),
                         width: double.infinity,
                         child: RaisedButton(
                           elevation: 5,
                           padding: EdgeInsets.all(15.0),
 
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder:
-                                (context) => Home()
-                            ));
-                          },
+                          onPressed: ()=> print('download image'),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15)
                           ),
                           color:  Colors.white,
                           child: Text(
-                            'SUBSCRIBE',
+                            'Add image of product',
+                            textAlign: TextAlign.left,
                             style: TextStyle(
-                              color:  Color(0xffEC0677),
+                              color:  Colors.black87,
                               fontSize: 18.0,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.normal,
                             ),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 60.0,
+                      ),
+                      Container(
+                          alignment: Alignment.bottomCenter,
+                          padding: EdgeInsets.symmetric(vertical: 25.0),
+
+                          child:Row(
+
+                            children: [
+                              Container(
+                                alignment: Alignment.bottomRight,
+                                child: RaisedButton(
+                                  elevation: 5,
+                                  padding: EdgeInsets.all(15.0),
+
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder:
+                                        (context) => ProductInfo()
+                                    ));
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)
+                                  ),
+                                  color:  Colors.white,
+                                  child: Text(
+                                    'Add new product',
+                                    style: TextStyle(
+                                      color:  Color(0xffEC0677),
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 70.0,
+                              ),
+                              Container(
+                                alignment: Alignment.bottomLeft,
+                                child: RaisedButton(
+                                  elevation: 5,
+                                  padding: EdgeInsets.all(15.0),
+
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder:
+                                        (context) => Home()
+                                    ));
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)
+                                  ),
+                                  color:  Colors.white,
+                                  child: Text(
+                                    'Validate',
+                                    style: TextStyle(
+                                      color:  Color(0xffEC0677),
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              )
+
+                            ],
+                          )
                       )
+                      ,
+
+
+
                     ],
                   ),
                 ),

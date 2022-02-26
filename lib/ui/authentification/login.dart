@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:swalis/ui/authentification/signin_artisan.dart';
+import 'package:swalis/ui/authentification/signin_client.dart';
 import 'package:swalis/ui/home/home.dart';
 import '../home/home.dart';
 
@@ -213,14 +214,36 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
+                      SizedBox(
+                        height: 50.0,
+                      ),
                       Container(
                         alignment: Alignment.centerRight,
                         child: FlatButton(
                           onPressed: () => {
                           Navigator.push(context, MaterialPageRoute(builder:
-                          (context) => SignInArtisan()
+                          (context) => SignInClient(),
                           ))
                         },
+                          padding: EdgeInsets.only(right: 0.0),
+                          child: Text(
+                            'Subscribe as client',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold
+                            ),
+                          ),
+
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.centerRight,
+                        child: FlatButton(
+                          onPressed: () => {
+                            Navigator.push(context, MaterialPageRoute(builder:
+                                (context) => SignInArtisan()
+                            ))
+                          },
                           padding: EdgeInsets.only(right: 0.0),
                           child: Text(
                             'Subscribe as supplier',

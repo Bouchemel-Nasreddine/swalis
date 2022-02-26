@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:swalis/ui/authentification/product_info.dart';
 
 import '../home/home.dart';
 
@@ -16,6 +17,17 @@ Widget buildFirstName(){
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
+      Text(
+        'Supplier information',
+        style: TextStyle(
+          color:  Colors.white,
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      SizedBox(
+        height: 10.0,
+      ),
       Container(
         alignment: Alignment.centerLeft,
         decoration: BoxDecoration(
@@ -133,7 +145,6 @@ Widget buildPhoneNumber(){
   );
 }
 
-
 Widget buildAdress(){
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -220,6 +231,17 @@ Widget buildPassword(){
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
+      Text(
+        'Password',
+        style: TextStyle(
+          color:  Colors.white,
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      SizedBox(
+        height: 10.0,
+      ),
 
       Container(
         alignment: Alignment.centerLeft,
@@ -331,10 +353,10 @@ class _SignInArtisanState extends State<SignInArtisan> {
                     vertical: 120,
                   ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children:  [
                       Text(
-                        'Sign Up supplier',
+                        'Sign Up Supplier',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 30.0,
@@ -344,20 +366,71 @@ class _SignInArtisanState extends State<SignInArtisan> {
                       SizedBox(
                         height: 50.0,
                       ),
+
                       buildFirstName(),
+                      SizedBox(
+                        height: 10.0,
+                      ),
                       buildLastName(),
-                      buildPhoneNumber(),
-                      buildAdress(),
+                      SizedBox(
+                        height: 10.0,
+                      ),
                       buildEmail(),
                       SizedBox(
-                        height: 20.0,
+                        height: 10.0,
                       ),
+                      buildPhoneNumber(),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      buildAdress(),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+
                       buildPassword(),
-                      buildConfirmPassword()
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      buildConfirmPassword(),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Container(
+                        alignment: Alignment.bottomRight,
+                        child: FlatButton(
+                          onPressed: () => {
+                            Navigator.push(context, MaterialPageRoute(builder:
+                                (context) => ProductInfo()
+                            ))
+                          },
+                          padding: EdgeInsets.only(right: 0.0),
+                          child: Text(
+                            'Next  ',
+                            style: TextStyle(
+
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              fontSize: 30.0,
+                              shadows: <Shadow>[
+
+                                Shadow(
+                            color: Colors.black.withOpacity(0.3),
+                              offset: Offset(1, 10),
+                              blurRadius: 15),
+
+                              ],
+
+                            ),
+                          ),
+
+                        ),
+                      )
                     ],
                   ),
                 ),
-              )
+              ),
+
             ],
           ),
         ),
