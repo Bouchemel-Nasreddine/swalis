@@ -52,12 +52,7 @@ class _ProductDetailState extends State<ProductDetail> {
                         ),
                         height: 250.0,
                         width: double.infinity,
-                        child: Text('product image',
-                          style: TextStyle(
-                              color: Colors.black87
-                          ),
-
-                        ),
+                        child: Image.asset("assets/gel_douche.png")
                       ),
                       SizedBox(
                         height: 10.0,
