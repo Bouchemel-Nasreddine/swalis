@@ -23,13 +23,13 @@ class _ProductDetailState extends State<ProductDetail> {
               Container(
                 height: double.infinity,
                 width: double.infinity,
-                decoration:  BoxDecoration(
+                decoration:  const BoxDecoration(
                     color: Color(0x66EC0677),
                 ),
                 child: SingleChildScrollView(
                   physics: AlwaysScrollableScrollPhysics(),
 
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 25.0,
                     vertical: 120,
                   ),
@@ -37,12 +37,12 @@ class _ProductDetailState extends State<ProductDetail> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children:  [
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 25.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 25.0),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10.0),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                   color: Colors.black26,
                                   blurRadius: 6,
@@ -54,16 +54,16 @@ class _ProductDetailState extends State<ProductDetail> {
                         width: double.infinity,
                         child: Image.asset("assets/gel_douche.png")
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10.0,
                       ),
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 25.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 25.0),
                         alignment: Alignment.centerLeft,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10.0),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                   color: Colors.black26,
                                   blurRadius: 6,
@@ -75,7 +75,7 @@ class _ProductDetailState extends State<ProductDetail> {
                         width: double.infinity,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             SizedBox(
                               height: 25.0,
                             ),
@@ -128,17 +128,17 @@ class _ProductDetailState extends State<ProductDetail> {
                           ],
                         )
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 60.0,
                       ),
                       Container(
 
-                        padding: EdgeInsets.symmetric(vertical: 25.0),
+                        padding: const EdgeInsets.symmetric(vertical: 25.0),
                         width: double.infinity,
 
                           child:RaisedButton(
                             elevation: 5,
-                            padding: EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.all(15.0),
 
                             onPressed: () {
                               Navigator.push(context, MaterialPageRoute(builder:
@@ -148,8 +148,8 @@ class _ProductDetailState extends State<ProductDetail> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)
                             ),
-                            color:  Color(0xffEC0677),
-                            child: Text(
+                            color:  const Color(0xffEC0677),
+                            child: const Text(
                               'Add to my panel',
                               style: TextStyle(
                                 color:  Colors.white,
@@ -158,11 +158,7 @@ class _ProductDetailState extends State<ProductDetail> {
                               ),
                             ),
                           ),
-                      )
-                      ,
-
-
-
+                      ),
                     ],
                   ),
                 ),

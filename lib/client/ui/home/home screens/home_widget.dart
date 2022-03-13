@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../product/product_detail.dart';
@@ -118,7 +117,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                       IconButton(
                                         onPressed: () {},
-                                        icon: Icon(
+                                        icon: const Icon(
                                           Icons.add_circle_outline,
                                           color: Color(0xfffeaf29),
                                         ),

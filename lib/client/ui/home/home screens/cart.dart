@@ -104,7 +104,7 @@ class _CartState extends State<Cart> {
                               onPressed: () => setState(() {
                                 cartList.removeAt(index);
                               }),
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.delete,
                                 color: Color(0xfffeaf29),
                               ),
@@ -120,7 +120,7 @@ class _CartState extends State<Cart> {
                             cartList.elementAt(index).description,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(color: Colors.black54),
+                            style: const TextStyle(color: Colors.black54),
                           ),
                         ),
                       ],

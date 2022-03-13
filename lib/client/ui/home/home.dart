@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
         child: _pages.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
         ],
         onTap: _onTap,
         currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xff192841),
+        selectedItemColor: const Color(0xff192841),
       ),
     );
   }

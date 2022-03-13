@@ -23,9 +23,9 @@ class _SearchState extends State<Search> {
                 hintText: 'search',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
-                  borderSide: BorderSide(width: 1.0),
+                  borderSide: const BorderSide(width: 1.0),
                 ),
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 focusColor: Theme.of(context).primaryColor,
               ),
             )

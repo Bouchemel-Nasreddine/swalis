@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:swalis/ui/authentification/signin_artisan.dart';
-import 'package:swalis/ui/authentification/signin_client.dart';
-import 'package:swalis/ui/home/home.dart';
-import '../home/home.dart';
+import 'package:swalis/authentification/signin_artisan.dart';
+import 'package:swalis/authentification/signin_client.dart';
+import 'package:swalis/client/ui/home/home.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
