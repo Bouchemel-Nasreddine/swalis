@@ -54,85 +54,84 @@ class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: EdgeInsets.only(left: size.width * 0.03),
-          child: const Text(
-            'Cart',
-            style: TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
-          ),
-        ),
-        Expanded(
-          child: ListView.separated(
-            separatorBuilder: (context, index) => const Divider(
-              color: Colors.grey,
-            ),
-            itemCount: cartList.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Container(
-                height: size.height * 0.2,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Row(
+    return SafeArea(
+      child: Container(
+        height: double.infinity,
+        width: double.infinity,
+        color: Colors.white10,
+        child: Center(
+          child: SizedBox(
+            width: size.width * 0.95,
+            child: ListView.builder(
+              itemCount: cartList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  height: size.height * 0.2,
+                  child: Card(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        CircleAvatar(
-                          child: cartList.elementAt(index).image,
-                          backgroundColor: const Color(0x00ffffff),
-                          radius: 25,
-                        ),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(cartList.elementAt(index).name,
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    color: Colors.black,
-                                  )),
-                              Text(
-                                cartList.elementAt(index).price.toString() +
-                                    ' DA',
-                                style: const TextStyle(
-                                  color: Color(0xfffeaf29),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
+                        Row(
+                          children: [
+                            CircleAvatar(
+                              child: cartList.elementAt(index).image,
+                              backgroundColor: const Color(0x00ffffff),
+                              radius: 25,
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(cartList.elementAt(index).name,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                        color: Color(0xff192841),
+                                      )),
+                                  Text(
+                                    cartList.elementAt(index).price.toString() +
+                                        ' DA',
+                                    style: const TextStyle(
+                                      color: Color(0xfffeaf29),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
+                            IconButton(
+                              onPressed: () => setState(() {
+                                cartList.removeAt(index);
+                              }),
+                              icon: Icon(
+                                Icons.delete,
+                                color: Color(0xfffeaf29),
+                              ),
+                            )
+                          ],
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: size.width * 0.05,
+                            right: size.width * 0.05,
+                          ),
+                          child: Text(
+                            cartList.elementAt(index).description,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(color: Colors.black54),
                           ),
                         ),
-                        IconButton(
-                          onPressed: () => cartList.removeAt(index),
-                          icon: Icon(Icons.delete, color:Theme.of(context).primaryColor ),
-                        )
                       ],
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: size.width * 0.05,
-                        right: size.width * 0.05,
-                      ),
-                      child: Text(
-                        cartList.elementAt(index).description,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            },
+                  ),
+                );
+              },
+            ),
           ),
         ),
-      ],
+      ),
     );
   }
 }

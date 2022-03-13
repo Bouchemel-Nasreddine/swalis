@@ -39,42 +39,42 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Theme.of(context).primaryColor,
+              color: Color(0xff192841),
             ),
             label: 'home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.search,
-              color: Theme.of(context).primaryColor,
+              color: Color(0xff192841),
             ),
             label: 'search',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.shopping_cart,
-              color: Theme.of(context).primaryColor,
+              color: Color(0xff192841),
             ),
             label: 'cart',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.assignment_turned_in,
-              color: Theme.of(context).primaryColor,
+              color: Color(0xff192841),
             ),
             label: 'orders',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
-              color: Theme.of(context).primaryColor,
+              color: Color(0xff192841),
             ),
             label: 'settings',
           ),
         ],
         onTap: _onTap,
         currentIndex: _selectedIndex,
-        selectedItemColor: Theme.of(context).primaryColor,
+        selectedItemColor: Color(0xff192841),
       ),
     );
   }
