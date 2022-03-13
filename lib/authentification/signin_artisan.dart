@@ -2,9 +2,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:swalis/ui/authentification/product_info.dart';
+import 'package:swalis/authentification/product_info.dart';
 
-import '../home/home.dart';
+import '../client/ui/home/home.dart';
 
 class SignInArtisan extends StatefulWidget {
   const SignInArtisan({ Key? key }) : super(key: key);

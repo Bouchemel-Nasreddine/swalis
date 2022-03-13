@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swalis/controllers/cart_controller.dart';
-import 'package:swalis/data%20classes/product.dart';
+
+import '../../../controllers/cart_controller.dart';
+import '../../../data classes/product.dart';
 
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);

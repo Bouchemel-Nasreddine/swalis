@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:swalis/ui/home/home%20screens/cart.dart';
-import 'package:swalis/ui/home/home%20screens/home_widget.dart';
-import 'package:swalis/ui/home/home%20screens/ordre.dart';
-import 'package:swalis/ui/home/home%20screens/search.dart';
+import 'package:swalis/client/ui/home/home%20screens/cart.dart';
+import 'package:swalis/client/ui/home/home%20screens/home_widget.dart';
+import 'package:swalis/client/ui/home/home%20screens/ordre.dart';
+import 'package:swalis/client/ui/home/home%20screens/search.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

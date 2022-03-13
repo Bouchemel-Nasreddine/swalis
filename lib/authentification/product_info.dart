@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../home/home.dart';
+import '../client/ui/home/home.dart';
 
 class ProductInfo extends StatefulWidget {
   const ProductInfo({ Key? key }) : super(key: key);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swalis/ui/authentification/login.dart';
+
+import 'authentification/login.dart';
 
 void main() {
   runApp(const MyApp());
