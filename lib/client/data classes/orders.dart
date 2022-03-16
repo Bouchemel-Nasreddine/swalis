@@ -1,9 +1,10 @@
-import 'package:swalis/data%20classes/product.dart';
+
+import 'package:swalis/client/data%20classes/product.dart';
 
 class Order {
   double _id;
-  Product _product;
-  double quantity;
+  List<Product> _product;
+  int quantity;
   DateTime _date;
   
   Order(this._id, this._product, this.quantity, this._date);
@@ -13,9 +14,9 @@ class Order {
  set date(DateTime value) => this._date = value;
 
 
-  Product get product => this._product;
+  List<Product> get product => this._product;
 
-  set product(Product value) => this._product = value;
+  set product(List<Product> value) => this._product = value;
 
   get getQuantity => this.quantity;
 

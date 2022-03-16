@@ -4,10 +4,11 @@ class Product {
   double _id;
   String _name;
   String _description;
-  Image _image;
+  String _image;
   double _price;
+  String Category;
 
-  Product(this._id, this._name, this._price, this._description, this._image);
+  Product(this._id, this._name, this._price, this._description, this._image, this.Category);
 
   double get id => this._id;
 
@@ -28,4 +29,9 @@ class Product {
   get price => this._price;
 
   set price(value) => this._price = value;
+  
+ String get getCategory => this.Category;
+
+ set setCategory(String Category) => this.Category = Category;
+
 }

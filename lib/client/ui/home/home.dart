@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:swalis/client/controllers/cart_controller.dart';
+import 'package:swalis/client/controllers/order_controller.dart';
 import 'package:swalis/client/ui/home/home%20screens/cart.dart';
 import 'package:swalis/client/ui/home/home%20screens/home_widget.dart';
 import 'package:swalis/client/ui/home/home%20screens/ordre.dart';
@@ -17,18 +20,19 @@ class _HomeState extends State<Home> {
     _selectedIndex = index;
     setState(() {});
   }
+
   static final List<Widget> _pages = <Widget>[
     HomeWidget(),
     Search(),
     Cart(),
     Ordre(),
-    Center(child: Text('settings'),),
+    Center(
+      child: Text('settings'),
+    ),
   ];
-
 
   @override
   Widget build(BuildContext context) {
-    
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
